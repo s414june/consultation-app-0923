@@ -11,7 +11,7 @@ body {
 }
 
 .p-menubar {
-    padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+    padding: 0.5rem;
 }
 
 .p-menubar-root-list>.p-menuitem-active>.p-submenu-list {
@@ -60,7 +60,10 @@ body {
 }
 
 .p-menubar .p-menubar-button{
-  flex-grow: 1;
-  justify-content: end;
-  margin-right: 1rem;
+  position: absolute;
+  right: 6.5rem;
+}
+
+@media screen and (max-width: 960px){
+
 }

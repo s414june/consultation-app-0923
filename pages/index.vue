@@ -53,14 +53,14 @@
         />
       </template>
     </Menubar>
-    <section class="flex">
-      <div class="w-1/2 flex justify-center items-center bg-white">
+    <section class="flex lg:flex-row flex-col">
+      <div class="lg:w-1/2 w-full flex justify-center items-center bg-white py-10">
         <div class="text-center">
           <h1 class="font-bold text-2xl text-sky-600">生活諮詢網</h1>
           <h2 class="text-2xl font-bold">您的生活好幫手</h2>
         </div>
       </div>
-      <div class="w-1/2 overflow-hidden h-80">
+      <div class="lg:w-1/2 w-full overflow-hidden h-80 lg:order-1 -order-1">
         <img
           alt="user header"
           src="~/assets/images/home.jpg"
