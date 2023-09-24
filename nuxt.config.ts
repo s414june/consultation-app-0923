@@ -23,6 +23,5 @@ export default defineNuxtConfig({
   },
   build: {
     transpile: ["primevue"],
-  },
-  // loading: '~/layouts/loading.vue'
+  }
 });

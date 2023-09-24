@@ -1,5 +1,8 @@
 <template>
   <div class="card relative z-2">
+    <Head>
+      <Title>生活諮詢網 - 您的生活好幫手</Title>
+    </Head>
     <Menubar
       :model="items"
       class="justify-between"
@@ -54,7 +57,9 @@
       </template>
     </Menubar>
     <section class="flex lg:flex-row flex-col">
-      <div class="lg:w-1/2 w-full flex justify-center items-center bg-white py-10">
+      <div
+        class="lg:w-1/2 w-full flex justify-center items-center bg-white py-10"
+      >
         <div class="text-center">
           <h1 class="font-bold text-2xl text-sky-600">生活諮詢網</h1>
           <h2 class="text-2xl font-bold">您的生活好幫手</h2>
@@ -67,12 +72,11 @@
         />
       </div>
     </section>
-    <section class="my-5 mb-8" id="about">
-      <h2
-        class="text-center text-2xl font-bold text-sky-600 my-2"
-      >
-        關於我們
-      </h2>
+    <section
+      class="my-5 mb-8"
+      id="about"
+    >
+      <h2 class="text-center text-2xl font-bold text-sky-600 my-2">關於我們</h2>
       <div class="flex justify-center flex-wrap">我們是您的生活好幫手~^^</div>
     </section>
     <section class="my-5 mb-8">
