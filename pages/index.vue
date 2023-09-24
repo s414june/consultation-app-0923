@@ -38,14 +38,14 @@
           :target="item.target"
           v-bind="props.action"
         >
+          <span v-bind="props.label">{{ label }}</span>
           <span
             :class="[
               hasSubmenu &&
-                (root ? 'pi pi-fw pi-angle-down' : 'pi pi-fw pi-angle-left'),
+                (root ? 'pi pi-fw pi-angle-down' : 'pi pi-fw pi-angle-right'),
             ]"
-            class="submenu-icon"
+            class="submenu-icon ml-2"
           />
-          <span v-bind="props.label">{{ label }}</span>
         </a>
       </template>
       <template #end>
@@ -56,7 +56,7 @@
         />
       </template>
     </Menubar>
-    <section class="flex lg:flex-row flex-col">
+    <section class="flex lg:flex-row flex-col shadow-md">
       <div
         class="lg:w-1/2 w-full flex justify-center items-center bg-white py-10"
       >
@@ -73,18 +73,18 @@
       </div>
     </section>
     <section
-      class="my-5 mb-8"
+      class="my-10"
       id="about"
     >
-      <h2 class="text-center text-2xl font-bold text-sky-600 my-2">關於我們</h2>
+      <h2 class="text-center text-2xl font-bold text-sky-600 my-3">關於我們</h2>
       <div class="flex justify-center flex-wrap">我們是您的生活好幫手~^^</div>
     </section>
-    <section class="my-5 mb-8">
-      <h2 class="text-center text-2xl font-bold text-sky-600 my-2">服務項目</h2>
+    <section class="my-10">
+      <h2 class="text-center text-2xl font-bold text-sky-600 my-3">服務項目</h2>
       <div class="flex justify-center flex-wrap">
-        <template v-for="card in cards">
+        <template v-for="item in items[1].items">
           <Card class="w-72 m-2">
-            <template #title>{{ card.title }}</template>
+            <template #title>{{ item.label }}</template>
             <!-- <template #subtitle> Card subtitle </template>
             <template #content>
               <p>
