@@ -28,6 +28,7 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap-vue": "^2.23.1",
-    "jquery": "^3.7.1"
+    "jquery": "^3.7.1",
+    "yarn": "^1.22.19"
   }
 }

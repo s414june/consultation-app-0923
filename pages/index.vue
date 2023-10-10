@@ -85,16 +85,18 @@
         <template v-for="item in items[1].items">
           <Card class="w-72 m-2">
             <template #title>{{ item.label }}</template>
-            <!-- <template #subtitle> Card subtitle </template>
+            <!-- <template #subtitle> Card subtitle </template> -->
             <template #content>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Inventore sed consequuntur error repudiandae numquam deserunt
-                quisquam repellat libero asperiores earum nam nobis, culpa ratione
-                quam perferendis esse, cupiditate neque quas!
-              </p>
+              <ul>
+                <li v-for="sub_item in item.items">{{sub_item.label}}
+                  <template v-if="sub_item.addtion">
+                    <br>
+                    <small>{{ sub_item.addtion }}</small>
+                  </template>
+                </li>
+              </ul>
             </template>
-            <template #footer>
+            <!-- <template #footer>
               <Button
                 icon="pi pi-check"
                 label="Save"
@@ -128,101 +130,97 @@ const items = ref([
     label: "服務項目",
     items: [
       {
-        label: "工商登記",
+        label: "社會團體申請與管理",
         items: [
           {
-            label: "Bookmark",
+            label: "人民團體申請立案",
+            addtion:"(含法人登記)"
           },
           {
-            label: "Video",
+            label: "人民團體會務管理",
+            addtion:"(會員大會 / 理監事會 / 年度計劃 / 年度預決算 / 稅籍處理)"
+          }
+        ],
+      },
+      {
+        label: "長照機構立案申請",
+        items: [
+          {
+            label: "協助處理長照機構立案",
+          },
+          {
+            label: "長照機構管理顧問",
           },
         ],
       },
       {
-        label: "勞資爭議",
+        label: "文書代繕",
         items: [
           {
-            label: "Bookmark",
+            label: "公文、書函釋疑與回函建議",
           },
           {
-            label: "Video",
+            label: "政府契約條文檢視與建議",
+            addtion:"政府購買式契約(BOT / OT案)條文檢視與建議"
+          },
+          {
+            label: "碩士論文寫作諮詢",
+            addtion:"(限社科院)"
           },
         ],
       },
       {
-        label: "社會團體",
+        label: "工商登記與勞資爭議",
         items: [
           {
-            label: "Bookmark",
+            label: "協助辦理工商登記",
           },
           {
-            label: "Video",
+            label: "勞資爭議諮詢與協調",
           },
         ],
       },
       {
-        label: "社會福利",
+        label: "簡報與網頁設計、製作、執行",
         items: [
           {
-            label: "Bookmark",
+            label: "各項業務簡報的設計與製作",
           },
           {
-            label: "Video",
+            label: "代為執行各項業務簡報",
+          },
+          {
+            label: "網頁設計與經營",
           },
         ],
       },
       {
-        label: "住宿申請",
+        label: "親職教育諮詢",
         items: [
           {
-            label: "Bookmark",
+            label: "學習評估",
           },
           {
-            label: "Video",
-          },
-        ],
-      },
-      {
-        label: "簡報設計",
-        items: [
-          {
-            label: "Bookmark",
+            label: "家長諮商",
           },
           {
-            label: "Video",
-          },
-        ],
-      },
-      {
-        label: "代繕代擬",
-        items: [
-          {
-            label: "Bookmark",
+            label: "師資培訓",
           },
           {
-            label: "Video",
-          },
-        ],
-      },
-      {
-        label: "親子教育",
-        items: [
-          {
-            label: "Bookmark",
+            label: "親職講座",
           },
           {
-            label: "Video",
-          },
-        ],
-      },
-      {
-        label: "家事調解",
-        items: [
-          {
-            label: "Bookmark",
+            label: "教材教具",
           },
           {
-            label: "Video",
+            label: "專業演講",
+          },
+          {
+            label: "教室規劃",
+          },
+          {
+            label: "英語教學",
+            addtion:"(拼音、拼字、聽力、口説、閱讀、寫作訓練)"
           },
         ],
       },

@@ -10,6 +10,12 @@ body {
     min-height: 100vh;
 }
 
+.p-card-content li {
+    list-style-type:circle;
+    /* list-style-position: inside; */
+    margin-left: 1.5em;
+}
+
 .p-menubar {
     padding: 0.5rem;
 }
@@ -40,9 +46,9 @@ body {
     margin-left: .2rem;
 }
 
-.p-menubar .p-menuitem:not(.p-highlight):not(.p-disabled)>.p-menuitem-content .p-menuitem-link .p-menuitem-text {
+/* .p-menubar .p-menuitem:not(.p-highlight):not(.p-disabled)>.p-menuitem-content .p-menuitem-link .p-menuitem-text {
     white-space: nowrap;
-}
+} */
 
 .p-menubar .p-menubar-root-list>.p-menuitem>.p-menuitem-content .p-menuitem-link .submenu-icon {
     order: 2;
@@ -62,8 +68,8 @@ body {
 
 @media screen and (min-width: 959px) {
     .p-menubar .p-submenu-list {
-        width: unset;
-        max-width: 12rem;
+        width: 15rem;
+        /* max-width: 100%; */
     }
     .p-menubar .p-submenu-list .p-menuitem .p-menuitem-content .p-menuitem-link .submenu-icon {
         margin: .5rem;
