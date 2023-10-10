@@ -2,6 +2,7 @@
   <!-- <div class="card relative z-2"> -->
     <Head>
       <Title>{{title}}</Title>
+      <meta name="description" content="我們致力於協助客戶處理與解決社會團體(social groups)、親職教育(education)、文書代繕(writing)等需要專業處理的各項事務與疑難雜症。">
     </Head>
     <nav>
 
