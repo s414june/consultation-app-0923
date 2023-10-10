@@ -1,9 +1,11 @@
 <template>
-  <div class="card relative z-2">
+  <!-- <div class="card relative z-2"> -->
     <Head>
-      <Title>生活諮詢網 - 您的生活好幫手</Title>
+      <Title>{{title}}</Title>
     </Head>
-    <Menubar
+    <nav>
+
+      <Menubar
       :model="items"
       class="justify-between"
     >
@@ -15,7 +17,7 @@
             width="30"
             class="mr-2"
           />
-          <h1 class="font-bold text-xl">生活諮詢網</h1>
+          <h1 class="font-bold text-xl">{{title}}</h1>
         </div>
       </template>
       <template #item="{ label, item, props, root, hasSubmenu }">
@@ -56,12 +58,13 @@
         />
       </template>
     </Menubar>
-    <section class="flex lg:flex-row flex-col shadow-md">
+    </nav>
+    <header class="flex lg:flex-row flex-col shadow-md">
       <div
         class="lg:w-1/2 w-full flex justify-center items-center bg-white py-10"
       >
         <div class="text-center">
-          <h1 class="font-bold text-2xl text-sky-600">生活諮詢網</h1>
+          <h1 class="font-bold text-2xl text-sky-600">{{title}}</h1>
           <h2 class="text-2xl font-bold">您的生活好幫手</h2>
         </div>
       </div>
@@ -71,14 +74,23 @@
           src="~/assets/images/home.jpg"
         />
       </div>
-    </section>
-    <section
+    </header>
+    <article
       class="my-10"
       id="about"
     >
       <h2 class="text-center text-2xl font-bold text-sky-600 my-3">關於我們</h2>
-      <div class="flex justify-center flex-wrap">我們是您的生活好幫手~^^</div>
-    </section>
+      <div class="text-center w-[600px] max-w-full m-auto">
+基於現代人腳步匆促，難以兼顧或專精生活上與事業上的各項事務。
+<br>
+因此我們致力於協助客戶處理與解決社會團體(social groups)、親職教育(education)、文書代繕(writing)等需要專業處理的各項事務與疑難雜症。
+<br>
+我們的團隊具備豐富的專業知識、執行能力與親和力。
+<br>
+歡迎您利用LINE免費諮詢，我們會竭誠為您服務。
+<br>
+任何服務項目皆會經過估價、報價，您覺得合理、滿意再進行。</div>
+    </article>
     <section class="my-10">
       <h2 class="text-center text-2xl font-bold text-sky-600 my-3">服務項目</h2>
       <div class="flex justify-center flex-wrap">
@@ -112,7 +124,7 @@
         </template>
       </div>
     </section>
-  </div>
+  <!-- </div> -->
   <footer class="bg-sky-900 w-full text-white flex justify-center p-4">
     <p class="text-sm">Copyright © 2023 生活諮詢網 All rights reserved.</p>
   </footer>
@@ -120,6 +132,8 @@
 
 <script setup>
 import { ref } from "vue";
+
+const title = ref("SEW諮詢團隊");
 
 const items = ref([
   {
