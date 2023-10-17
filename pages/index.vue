@@ -49,11 +49,13 @@
         </a>
       </template>
       <template #end>
-        <Button
-          label="Line諮詢"
-          severity="info"
-          rounded
-        />
+        <a href="https://lin.ee/Ud0FbbD">
+          <Button
+            label="Line諮詢"
+            severity="info"
+            rounded
+          />
+        </a>
       </template>
     </Menubar>
     <section class="flex lg:flex-row flex-col shadow-md">
