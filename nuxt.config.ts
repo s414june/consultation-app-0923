@@ -1,5 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  site:{
+    url:"sew-counseling.com"
+  },
   devtools: { enabled: true },
   css: [
     "primevue/resources/primevue.css",
@@ -15,7 +18,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ["@formkit/nuxt", "@sfxcode/nuxt-primevue"],
+  modules: ["@formkit/nuxt", "@sfxcode/nuxt-primevue","nuxt-simple-sitemap"],
   primevue: {
     config: {
       ripple: true,
